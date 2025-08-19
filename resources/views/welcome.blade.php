@@ -1,4 +1,4 @@
-<x-layouts.landing title="Ddreams - Professional Trucking Services">
+<x-layouts.landing title="DDreams - Professional Trucking Services">
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-emerald-800 text-white overflow-hidden">
         <!-- Background Pattern -->
@@ -145,15 +145,15 @@
                     </div>
                 </div>
 
-                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:border-orange-200 transform hover:-translate-y-2">
-                    <div class="bg-gradient-to-br from-orange-100 to-orange-200 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                        <svg class="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
+                <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8 border border-gray-100 hover:border-emerald-200 transform hover:-translate-y-2">
+                    <div class="bg-gradient-to-br from-emerald-100 to-emerald-200 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">Warehousing</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">Warehousing</h3>
                     <p class="text-gray-600 leading-relaxed">Secure storage solutions with advanced inventory management and distribution services.</p>
-                    <div class="mt-6 flex items-center text-orange-600 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="mt-6 flex items-center text-emerald-600 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         Learn More <span class="ml-2">→</span>
                     </div>
                 </div>
@@ -211,7 +211,7 @@
                 <div class="space-y-8">
                     <div class="inline-flex items-center bg-emerald-100 text-emerald-800 px-4 py-2 rounded-full text-sm font-medium">
                         <span class="w-2 h-2 bg-emerald-500 rounded-full mr-2"></span>
-                        About Ddreams
+                        About DDreams
                     </div>
 
                     <h2 class="text-5xl font-bold text-gray-900 leading-tight">
@@ -220,7 +220,7 @@
 
                     <div class="space-y-6">
                         <p class="text-lg text-gray-600 leading-relaxed">
-                            Founded with a vision to revolutionize the trucking industry, Ddreams has been connecting businesses across the nation for over 15 years. Our commitment to excellence, reliability, and customer satisfaction has made us a trusted partner for companies of all sizes.
+                            Founded with a vision to revolutionize the trucking industry, DDreams has been connecting businesses across the nation for over 15 years. Our commitment to excellence, reliability, and customer satisfaction has made us a trusted partner for companies of all sizes.
                         </p>
                         <p class="text-lg text-gray-600 leading-relaxed">
                             With a modern fleet of over 200 vehicles, experienced drivers, and cutting-edge technology, we ensure your cargo reaches its destination safely and on time, every time.
@@ -319,7 +319,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold mb-2 text-emerald-300">Phone</h4>
-                                <p class="text-gray-300 text-lg">(555) 123-4567</p>
+                                <p class="text-gray-300 text-lg">(234) 206-4000</p>
                                 <p class="text-gray-400">24/7 Customer Support</p>
                             </div>
                         </div>
@@ -332,7 +332,7 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold mb-2 text-blue-300">Email</h4>
-                                <p class="text-gray-300 text-lg">info@ddreams.com</p>
+                                <p class="text-gray-300 text-lg">ddreamsgroup@gmail.com</p>
                                 <p class="text-gray-400">quotes@ddreams.com</p>
                             </div>
                         </div>
@@ -345,8 +345,8 @@
                             </div>
                             <div>
                                 <h4 class="text-xl font-bold mb-2 text-purple-300">Address</h4>
-                                <p class="text-gray-300 text-lg">123 Logistics Avenue</p>
-                                <p class="text-gray-400">Transport City, TC 12345</p>
+                                <p class="text-gray-300 text-lg">1502 BRITTAIN RD #1092</p>
+                                <p class="text-gray-400">AKRON, OH 44310</p>
                             </div>
                         </div>
                     </div>
@@ -393,6 +393,12 @@
                             <textarea rows="4" class="w-full px-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/50 transition-all duration-300 backdrop-blur-sm resize-none" placeholder="Tell us about your shipping needs..."></textarea>
                         </div>
 
+                        <div class="text-xs text-gray-300 mb-4 text-center">
+                            By submitting this form, you agree to our 
+                            <a href="{{ route('privacy.policy') }}" class="text-emerald-300 hover:text-emerald-200 underline">Privacy Policy</a> and 
+                            <a href="{{ route('terms.conditions') }}" class="text-emerald-300 hover:text-emerald-200 underline">Terms & Conditions</a>
+                        </div>
+                        
                         <button type="submit" class="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl">
                             Send Message
                             <span class="inline-block ml-2">→</span>

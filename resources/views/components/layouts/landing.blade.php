@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title ?? 'Ddreams - Professional Trucking Services' }}</title>
+    <title>{{ $title ?? 'DDreams - Professional Trucking Services' }}</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -68,14 +68,9 @@
         <div class="flex justify-between items-center h-20">
             <!-- Enhanced Logo -->
             <div class="flex items-center group">
-                <a href="/" class="flex items-center space-x-3 transform hover:scale-105 transition-all duration-300">
-                    <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
-                        </svg>
-                    </div>
+                <a href="/" class="flex items-center transform hover:scale-105 transition-all duration-300">
                     <div class="text-3xl font-black bg-gradient-to-r from-emerald-600 to-emerald-800 bg-clip-text text-transparent">
-                        Ddreams
+                        DDreams
                     </div>
                 </a>
             </div>
@@ -182,14 +177,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <!-- Enhanced Company Info -->
             <div class="lg:col-span-2">
-                <div class="flex items-center space-x-3 mb-6 group">
-                    <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 w-14 h-14 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/>
-                        </svg>
-                    </div>
+                <div class="flex items-center mb-6 group">
                     <h3 class="text-3xl font-black bg-gradient-to-r from-emerald-300 to-emerald-500 bg-clip-text text-transparent">
-                        Ddreams
+                        DDreams
                     </h3>
                 </div>
                 <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
@@ -277,7 +267,7 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="text-gray-300 font-medium">info@ddreams.com</p>
+                            <p class="text-gray-300 font-medium">ddreamsgroup@gmail.com</p>
                             <p class="text-gray-500 text-sm">24/7 Support</p>
                         </div>
                     </div>
@@ -289,7 +279,7 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="text-gray-300 font-medium">(555) 123-4567</p>
+                            <p class="text-gray-300 font-medium">(234) 206-4000</p>
                             <p class="text-gray-500 text-sm">Emergency Line</p>
                         </div>
                     </div>
@@ -301,8 +291,8 @@
                             </svg>
                         </div>
                         <div>
-                            <p class="text-gray-300 font-medium">123 Logistics Ave</p>
-                            <p class="text-gray-500 text-sm">Transport City, TC 12345</p>
+                            <p class="text-gray-300 font-medium">1502 BRITTAIN RD #1092</p>
+                            <p class="text-gray-500 text-sm">AKRON, OH 44310</p>
                         </div>
                     </div>
                 </div>
@@ -313,7 +303,128 @@
         <div class="bg-gradient-to-r from-emerald-500/20 to-emerald-700/20 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-emerald-500/30">
             <div class="text-center mb-6">
                 <h4 class="text-2xl font-bold text-emerald-300 mb-2">Stay Updated</h4>
-                <p class="text-gray-300">Get the latest news and updates from Ddreams</p>
+                <p class="text-gray-300">Get the latest news and updates from DDreams</p>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py
+                <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-300 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition-all duration-300" />
+                <button type="submit" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-emerald-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+
+        <!-- Enhanced Bottom Footer -->
+        <div class="border-t border-white/10 pt-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Legal Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-emerald-300 mb-4 flex items-center">
+                        <div class="w-1 h-5 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full mr-3"></div>
+                        Legal
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="{{ route('privacy.policy') }}" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('terms.conditions') }}" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Cookie Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-emerald-300 mb-4 flex items-center">
+                        <div class="w-1 h-5 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full mr-3"></div>
+                        Quick Links
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#services" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Our Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="group flex items-center text-gray-400 hover:text-emerald-300 transition-all duration-300">
+                                <svg class="w-4 h-4 mr-3 text-emerald-500 group-hover:text-emerald-400 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <h4 class="text-lg font-bold text-emerald-300 mb-4 flex items-center">
+                        <div class="w-1 h-5 bg-gradient-to-b from-emerald-400 to-emerald-600 rounded-full mr-3"></div>
+                        Company
+                    </h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        DDreams LLC - Professional trucking services you can trust. Licensed and insured for your peace of mind.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <p>DOT #: 4120585</p>
+                        <p>MC #: 1575874</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © {{ date('Y') }} DDreams LLC. All rights reserved. | 
+                    <a href="{{ route('privacy.policy') }}" class="text-emerald-400 hover:text-emerald-300 transition-colors">Privacy Policy</a> | 
+                    <a href="{{ route('terms.conditions') }}" class="text-emerald-400 hover:text-emerald-300 transition-colors">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Enhanced Mobile Navigation Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

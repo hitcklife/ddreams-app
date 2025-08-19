@@ -15,24 +15,23 @@
                 <flux:navlist.group :heading="__('Platform')" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
                 </flux:navlist.group>
+
+                @if(auth()->user()->isDriver())
+                <flux:navlist.group :heading="__('Driver Portal')" class="grid">
+                    <flux:navlist.item icon="truck" :href="route('driver.dashboard')" :current="request()->routeIs('driver.dashboard')" wire:navigate>{{ __('Driver Dashboard') }}</flux:navlist.item>
+                    <flux:navlist.item icon="user" :href="route('driver.profile')" :current="request()->routeIs('driver.profile')" wire:navigate>{{ __('Driver Profile') }}</flux:navlist.item>
+                </flux:navlist.group>
+                @endif
             </flux:navlist>
 
             <flux:spacer />
 
-            <flux:navlist variant="outline">
-                <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
-                {{ __('Repository') }}
-                </flux:navlist.item>
 
-                <flux:navlist.item icon="book-open-text" href="https://laravel.com/docs/starter-kits#livewire" target="_blank">
-                {{ __('Documentation') }}
-                </flux:navlist.item>
-            </flux:navlist>
 
             <!-- Desktop User Menu -->
             <flux:dropdown class="hidden lg:block" position="bottom" align="start">
                 <flux:profile
-                    :name="auth()->user()->name"
+                    :name="auth()->user()->full_name"
                     :initials="auth()->user()->initials()"
                     icon:trailing="chevrons-up-down"
                 />
@@ -50,7 +49,7 @@
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
+                                    <span class="truncate font-semibold">{{ auth()->user()->full_name }}</span>
                                     <span class="truncate text-xs">{{ auth()->user()->email }}</span>
                                 </div>
                             </div>
@@ -61,6 +60,8 @@
 
                     <flux:menu.radio.group>
                         <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                        <flux:menu.item :href="route('privacy.policy')" icon="shield-check" wire:navigate>{{ __('Privacy Policy') }}</flux:menu.item>
+                        <flux:menu.item :href="route('terms.conditions')" icon="document-text" wire:navigate>{{ __('Terms & Conditions') }}</flux:menu.item>
                     </flux:menu.radio.group>
 
                     <flux:menu.separator />
@@ -100,7 +101,7 @@
                                 </span>
 
                                 <div class="grid flex-1 text-start text-sm leading-tight">
-                                    <span class="truncate font-semibold">{{ auth()->user()->name }}</span>
+                                    <span class="truncate font-semibold">{{ auth()->user()->full_name }}</span>
                                     <span class="truncate text-xs">{{ auth()->user()->email }}</span>
                                 </div>
                             </div>
@@ -111,6 +112,8 @@
 
                     <flux:menu.radio.group>
                         <flux:menu.item :href="route('settings.profile')" icon="cog" wire:navigate>{{ __('Settings') }}</flux:menu.item>
+                        <flux:menu.item :href="route('privacy.policy')" icon="shield-check" wire:navigate>{{ __('Privacy Policy') }}</flux:menu.item>
+                        <flux:menu.item :href="route('terms.conditions')" icon="document-text" wire:navigate>{{ __('Terms & Conditions') }}</flux:menu.item>
                     </flux:menu.radio.group>
 
                     <flux:menu.separator />
