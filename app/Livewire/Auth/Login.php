@@ -28,22 +28,70 @@ class Login extends Component
      */
     public function login(): void
     {
-        $this->validate();
+        try {
+            \Log::info('Login attempt started', [
+                'email' => $this->email,
+                'has_password' => !empty($this->password),
+                'remember' => $this->remember,
+                'session_id' => session()->getId(),
+                'csrf_token' => session()->token(),
+            ]);
 
-        $this->ensureIsNotRateLimited();
+            $this->validate();
 
-        if (! Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
-            RateLimiter::hit($this->throttleKey());
+            \Log::info('Validation passed');
 
+            $this->ensureIsNotRateLimited();
+
+            \Log::info('Rate limiting check passed');
+
+            $attemptResult = Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember);
+
+            \Log::info('Auth attempt result', [
+                'success' => $attemptResult,
+                'user_found' => \App\Models\User::where('email', $this->email)->exists(),
+            ]);
+
+            if (!$attemptResult) {
+                RateLimiter::hit($this->throttleKey());
+
+                \Log::warning('Login failed - invalid credentials', [
+                    'email' => $this->email,
+                    'throttle_key' => $this->throttleKey(),
+                ]);
+
+                throw ValidationException::withMessages([
+                    'email' => __('auth.failed'),
+                ]);
+            }
+
+            RateLimiter::clear($this->throttleKey());
+            Session::regenerate();
+
+            \Log::info('Login successful', [
+                'user_id' => auth()->id(),
+                'email' => $this->email,
+            ]);
+
+            $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+
+        } catch (\Exception $e) {
+            \Log::error('Login exception', [
+                'message' => $e->getMessage(),
+                'trace' => $e->getTraceAsString(),
+                'email' => $this->email,
+            ]);
+
+            // Re-throw validation exceptions so they show to the user
+            if ($e instanceof ValidationException) {
+                throw $e;
+            }
+
+            // For other exceptions, show a generic error
             throw ValidationException::withMessages([
-                'email' => __('auth.failed'),
+                'email' => 'An error occurred during login. Please try again.',
             ]);
         }
-
-        RateLimiter::clear($this->throttleKey());
-        Session::regenerate();
-
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
     }
 
     /**
