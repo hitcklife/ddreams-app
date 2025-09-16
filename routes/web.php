@@ -51,4 +51,10 @@ Route::get('terms-conditions', function () {
     return view('legal.terms-conditions');
 })->name('terms.conditions');
 
+// Simple Login Routes (temporary fix)
+Route::get('simple-login', [App\Http\Controllers\SimpleAuthController::class, 'showLogin'])->name('simple.login');
+Route::post('simple-login', [App\Http\Controllers\SimpleAuthController::class, 'login'])->name('simple.login.post');
+Route::post('simple-logout', [App\Http\Controllers\SimpleAuthController::class, 'logout'])->name('simple.logout');
+Route::get('create-test-user', [App\Http\Controllers\SimpleAuthController::class, 'createTestUser'])->name('create.test.user');
+
 require __DIR__.'/auth.php';
