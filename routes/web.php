@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\AmazonAuctions;
+use App\Livewire\AmazonSettings;
 use App\Livewire\DriverDashboard;
 use App\Livewire\DriverProfile;
 use App\Livewire\Settings\Appearance;
@@ -17,6 +19,14 @@ Route::get('dashboard', function () {
     }
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('amazon', function () {
+    return view('amazon');
+})->middleware(['auth', 'verified'])->name('amazon');
+
+Route::get('amazon/settings', AmazonSettings::class)->middleware(['auth', 'verified'])->name('amazon.settings');
+
+Route::get('amazon/auctions', AmazonAuctions::class)->middleware(['auth', 'verified'])->name('amazon.auctions');
 
 // Driver Routes
 Route::middleware(['auth', 'verified'])->group(function () {

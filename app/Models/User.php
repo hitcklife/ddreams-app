@@ -85,4 +85,12 @@ class User extends Authenticatable
     {
         return $this->role === 'driver';
     }
+
+    /**
+     * Get the amazon setting associated with the user.
+     */
+    public function amazonSetting(): HasOne
+    {
+        return $this->hasOne(AmazonSetting::class);
+    }
 }
